@@ -10,8 +10,20 @@ public class FlowCalculatorTests
     }
 
     [Fact]
-    public void Area_Value_ShouldPass()
+    public void Area_SteelPipe_MatchesReference()
     {
-        AssertClose(FlowCalculator.Area(0.1), 0.007854);
+        AssertClose(0.007854, FlowCalculator.Area(0.1));
+    }
+
+    [Fact]
+    public void Velocity_SteelPipe_MatchesReference()
+    {
+        AssertClose(1.2732, FlowCalculator.Velocity(0.01, 0.007854));
+    }
+
+    [Fact]
+    public void Reynolds_SteelPipe_MatchesReference()
+    {
+        AssertClose(126841, FlowCalculator.Reynolds(998.2, 1.2732, 0.1, 1.002e-3));
     }
 }
