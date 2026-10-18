@@ -5,19 +5,16 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B214051A-63EC-4E53-AC84-773A255C2269}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PipeFlow.Core", "src\PipeFlow.Core\PipeFlow.Core.csproj", "{2588D9A2-58FE-4FCB-891F-BDE6BB9C384A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PipeFlow.Core", "src\PipeFlow.Core\PipeFlow.Core.csproj", "{2588D9A2-58FE-4FCB-891F-BDE6BB9C384A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{20949412-6074-4A5A-81D1-F64A5CB82F5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PipeFlow.Tests", "tests\PipeFlow.Tests\PipeFlow.Tests.csproj", "{1CDDF636-88A4-4D9D-B4E4-8BA783696D6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PipeFlow.Tests", "tests\PipeFlow.Tests\PipeFlow.Tests.csproj", "{1CDDF636-88A4-4D9D-B4E4-8BA783696D6C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{2588D9A2-58FE-4FCB-891F-BDE6BB9C384A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -29,8 +26,14 @@ Global
 		{1CDDF636-88A4-4D9D-B4E4-8BA783696D6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CDDF636-88A4-4D9D-B4E4-8BA783696D6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{2588D9A2-58FE-4FCB-891F-BDE6BB9C384A} = {B214051A-63EC-4E53-AC84-773A255C2269}
 		{1CDDF636-88A4-4D9D-B4E4-8BA783696D6C} = {20949412-6074-4A5A-81D1-F64A5CB82F5D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A15A93F6-316C-4D03-95DA-69D01F825A40}
 	EndGlobalSection
 EndGlobal
