@@ -26,4 +26,22 @@ public class FlowCalculatorTests
     {
         AssertClose(126841, FlowCalculator.Reynolds(998.2, 1.2732, 0.1, 1.002e-3));
     }
+
+    [Fact]
+    public void LaminarFriction_LaminarCase_MatchesReference()
+    {
+        AssertClose(0.1009, FlowCalculator.LaminarFriction(634.2));
+    }
+
+    [Fact]
+    public void SwameeJain_TurbulentCase_MatchesReference()
+    {
+        AssertClose(0.01960, FlowCalculator.SwameeJain(4.5e-5, 0.1, 126841));
+    }
+
+    [Fact]
+    public void Colebrook_TurbulentCase_MatchesReference()
+    {
+        AssertClose(0.01951, FlowCalculator.Colebrook(4.5e-5, 0.1, 126841));
+    }
 }
