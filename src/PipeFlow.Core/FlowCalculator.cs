@@ -2,6 +2,8 @@
 
 public static class FlowCalculator
 {
+    const double Gravity = 9.81;
+
     public static double Area(double diameter) => (Math.PI * Math.Pow(diameter, 2)) / 4;
 
     public static double Velocity(double flowRate, double area) => flowRate / area;
@@ -33,4 +35,7 @@ public static class FlowCalculator
 
         throw new InvalidOperationException("Colebrook did not converge after 50 iterations");
     }
+
+    public static double HeadLoss(double friction, double length, double diameter, double velocity) => friction * (length / diameter) * Math.Pow(velocity, 2) / (2 * Gravity);
+    public static double PressureDrop(double density, double headLoss) => density * Gravity * headLoss;
 }

@@ -44,4 +44,16 @@ public class FlowCalculatorTests
     {
         AssertClose(0.01951, FlowCalculator.Colebrook(4.5e-5, 0.1, 126841));
     }
+
+    [Fact]
+    public void HeadLoss_TurbulentCase_MatchesReference()
+    {
+        AssertClose(1.612, FlowCalculator.HeadLoss(0.01951, 100, 0.1, 1.2732));
+    }
+
+    [Fact]
+    public void PressureDrop_TurbulentCase_MatchesReference()
+    {
+        AssertClose(15787, FlowCalculator.PressureDrop(998.2, 1.612));
+    }
 }
