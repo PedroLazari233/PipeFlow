@@ -56,4 +56,12 @@ public class FlowCalculatorTests
     {
         AssertClose(15787, FlowCalculator.PressureDrop(998.2, 1.612));
     }
+
+    [Theory]
+    [InlineData(634.2, 0.1009)]
+    [InlineData(126841, 0.01951)]
+    public void Friction_TurbulentCase_MatchesReference(double reynolds, double expectedFriction)
+    {
+        AssertClose(expectedFriction, FlowCalculator.Friction(4.5e-5, 0.1, reynolds));
+    }
 }
